@@ -2,7 +2,7 @@
 
 #include <ctime>   
 
-using namespace std;
+using namespace :: std;
 
 
 template <typename T>
