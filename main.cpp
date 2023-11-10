@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctime>
+using namespace ::std;
 
 template <typename T>
 void generateRandomArray(T arr[], int size, T minVal, T maxVal) {
@@ -11,9 +12,9 @@ void generateRandomArray(T arr[], int size, T minVal, T maxVal) {
 template <typename T>
 void printArray(const T arr[], int size) {
     for (int i = 0; i < size; ++i) {
-        std::cout << arr[i] << " ";
+        cout << arr[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 }
 
 
@@ -77,10 +78,10 @@ int main() {
     srand(static_cast<unsigned>(time(nullptr)));
     generateRandomArray(arr1D, size1D, 1, 20);
 
-    std::cout << "1D Array: ";
+    cout << "1D Array: ";
     printArray(arr1D, size1D);
 
-    std::cout << "Max in 1D array: " << findMax(arr1D, size1D) << std::endl;
+    cout << "Max in 1D array: " << findMax(arr1D, size1D) << endl;
 
     const int size2D = 2;
     int arr2D[size2D][3];
@@ -88,12 +89,12 @@ int main() {
     generateRandomArray(arr2D[0], 3, 1, 20);
     generateRandomArray(arr2D[1], 3, 1, 20);
 
-    std::cout << "2D Array: " << std::endl;
+    cout << "2D Array: " << endl;
     for (int i = 0; i < size2D; ++i) {
         printArray(arr2D[i], 3);
     }
 
-    std::cout << "Max in 2D array: " << findMax(arr2D, size2D, 3) << std::endl;
+   cout << "Max in 2D array: " << findMax(arr2D, size2D, 3) << endl;
 
     const int size3D = 2;
     int arr3D[size3D][3][3];
@@ -105,18 +106,18 @@ int main() {
     generateRandomArray(arr3D[1][1], 3, 1, 20);
     generateRandomArray(arr3D[1][2], 3, 1, 20);
 
-    std::cout << "3D Array: " << std::endl;
+    cout << "3D Array: " << endl;
     for (int i = 0; i < size3D; ++i) {
         for (int j = 0; j < 3; ++j) {
             printArray(arr3D[i][j], 3);
         }
-        std::cout << std::endl;
+        cout << endl;
     }
 
-    std::cout << "Max in 3D array: " << findMax(arr3D, size3D, 3, 3) << std::endl;
+    cout << "Max in 3D array: " << findMax(arr3D, size3D, 3, 3) << endl;
 
-    std::cout << "Max of two integers: " << findMax(10, 5) << std::endl;
-    std::cout << "Max of three integers: " << findMax(5, 10, 8) << std::endl;
+    cout << "Max of two integers: " << findMax(10, 5) << endl;
+    cout << "Max of three integers: " << findMax(5, 10, 8) << endl;
 
     return 0;
 }
